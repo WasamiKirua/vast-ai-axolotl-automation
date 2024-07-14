@@ -47,7 +47,6 @@ $ python preparation.py
 
 NOTE: The script will log you in automatically
 
-5)
 ```
 $ chmod +x run_training.sh
 $ cd axolotl
