@@ -9,7 +9,7 @@ With a few changes, if you want you could adapt the code to train your model of 
 The following docker base image has been selected:
 
 winglian/axolotl:main-py3.10-cu121-2.1.2
-[](https://cloud.vast.ai/templates/edit?templateHashId=886c5741378aa948e0e41edeac0caaab)
+[Vast.ai link](https://cloud.vast.ai/templates/edit?templateHashId=886c5741378aa948e0e41edeac0caaab)
 
 
 ## !! Important !!
