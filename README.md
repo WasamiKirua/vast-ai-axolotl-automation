@@ -9,7 +9,7 @@ With a few changes, if you want you could adapt the code to train your model of 
 The following docker base image has been selected:
 
 winglian/axolotl:main-py3.10-cu121-2.1.2
-https://cloud.vast.ai/templates/edit?templateHashId=886c5741378aa948e0e41edeac0caaab
+[](https://cloud.vast.ai/templates/edit?templateHashId=886c5741378aa948e0e41edeac0caaab)
 
 
 ## !! Important !!
@@ -34,9 +34,9 @@ YAML_FILE = "fft-1.6b.yaml"
 YAML_PATH = '/workspace/axolotl/examples/stablelm-2/1.6b'
 
 ```
-# $ conda create --name axolotl-vastai python=3.10
-# $ conda activate axolotl-vastai
-# $ pip install -r requirments.txt
+$ conda create --name axolotl-vastai python=3.10
+$ conda activate axolotl-vastai
+$ pip install -r requirments.txt
 ```
 4) Instanciate your instance and wait for availability
    
