@@ -28,10 +28,11 @@ winglian/axolotl:main-py3.10-cu121-2.1.2
 1) move your datasets into datasets folder (I reccomend jsonl)
 2) move the axolotl config yaml file into the root repo's folder
 3) set the following vars as needed
-   
+```
 VASTAI_KEY = "your-key"
 YAML_FILE = "fft-1.6b.yaml"
 YAML_PATH = '/workspace/axolotl/examples/stablelm-2/1.6b'
+```
 
 ```
 $ conda create --name axolotl-vastai python=3.10
