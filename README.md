@@ -1,6 +1,11 @@
 # vast-ai-axolotl-automation
 
-This repo is intended to provide tools to automate the fine tuning of LLM models using Vast.ai 
+This repo is intended to provide tools to automate the fine tuning of LLM models using Vast.ai
+
+# Update 20.7.24
+
+1) The script supports now instance tagging. You can run the script against the needed instance, seat and enjoy
+2) Fixed an issue with the ssh port extraction logic, i was parsing the wrong value for the port
 
 ## Notes
 
@@ -29,17 +34,29 @@ winglian/axolotl:main-py3.10-cu121-2.1.2
 2) move the axolotl config yaml file into the root repo's folder
 3) set the following vars as needed
 ```
+preparation.py:
+
 VASTAI_KEY = "your-key"
 YAML_FILE = "fft-1.6b.yaml"
 YAML_PATH = '/workspace/axolotl/examples/stablelm-2/1.6b'
+TARGET_TAG = 'axolotl-stablelm'
+
+run_training.py:
+
+HF_TOKEN = ""
+WANDB_TOKEN = ""
+VASTAI_KEY = ""
+YAML_FILE = "fft-1.6b.yaml"
+YAML_PATH = f"examples/stablelm-2/1.6b/"
+TARGET_TAG = 'axolotl-stablelm'
 ```
 
 ```
 $ conda create --name axolotl-vastai python=3.10
 $ conda activate axolotl-vastai
-$ pip install -r requirments.txt
+$ pip install colorama vastai
 ```
-4) Instanciate your instance and wait for availability
+4) Instanciate your instance and wait for availability, ensure to tag the instance with the corresponding value of TARGET_TAG
    
 ```
 $ python preparation.py
@@ -48,8 +65,10 @@ $ python preparation.py
 NOTE: The script will log you in automatically
 
 ```
+$ cd /workspace/axolotl
+$ chmod +x deps.sh
+$ ./deps.sh
 $ chmod +x run_training.sh
-$ cd axolotl
 $ python run_training.py
 ```
  
